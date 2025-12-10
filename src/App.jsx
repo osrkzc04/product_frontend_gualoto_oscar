@@ -1,5 +1,5 @@
 import { use, useEffect, useState } from 'react'
-import HelloWorldCard from './components/HelloWorldCard.jsx'
+import ProductList from './components/ProductList.jsx'
 import './App.css'
 
 import { productService } from './services/productService.js'
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <HelloWorldCard />
+      <ProductList products={products} />
     </>
   )
 }
