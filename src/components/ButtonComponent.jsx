@@ -1,10 +1,12 @@
-function ButtonComponent({ type, text,onClick, disabled}) {
+function ButtonComponent({ type, text,onClick, disabled,buttonType="button"}) {
 
     return (
         <button 
             onClick={onClick}
             disabled={disabled}
-            className={`${baseClasses} ${typeClasses[type]}`}>
+            className={`${baseClasses} ${typeClasses[type]}`}
+            type={buttonType}
+        >
             {text}
         </button>
     );
@@ -12,7 +14,7 @@ function ButtonComponent({ type, text,onClick, disabled}) {
 
 export default ButtonComponent;
 
-  const baseClasses = "px-4 py-2 font-medium rounded transition-colors";
+  const baseClasses = "px-4 py-2 font-medium rounded transition-colors mr-1";
   const typeClasses = {  
     primary: "bg-blue-600 text-white hover:bg-blue-700",
     secondary: "bg-gray-600 text-white hover:bg-gray-800",

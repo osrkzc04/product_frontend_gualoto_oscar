@@ -23,6 +23,13 @@ export default function HelloWorldCard() {
             onClick={() => alert('Button Clicked!')}
             disabled={false}
         /> 
+
+        <ButtonComponent 
+            type="danger"
+            text="Click Me"
+            onClick={() => console.log('Soy un botón rojo')}
+            disabled={false}
+        /> 
       
     </div>
   );
